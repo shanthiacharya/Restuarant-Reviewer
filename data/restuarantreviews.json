@@ -1,0 +1,57 @@
+
+[
+  {"id":1,
+    "name":"Subway",
+    "cuisine":"Fast Food",
+    "rating": "3.9",
+    "photo": "../images/subway.jpg",
+     "hours": "7AM-10PM",
+     "url": "subway.html",
+
+    "reviews": [
+        {
+        "reviewername":"Joe",
+        "date":"03/21/15",
+        "rating": "3.7",
+        "comments": " Lonnnnnnnnnnnn"
+      },
+      {
+          "reviewername":"bbbb",
+          "date":"03/21/15",
+          "rating": "3.7",
+          "comments": " Lonnnnnnnnnnnn"
+      },
+      {
+        "reviewername":"ccc",
+        "date":"03/21/15",
+        "rating": "3.7",
+        "comments": " Lonnnnnnnnnnnn"
+      },
+      {
+      "reviewername":"ddd",
+      "date":"03/21/15",
+      "rating": "3.7",
+      "comments": " Lonnnnnnnnnnnn"
+     }
+     ]
+
+  },
+  {"id":2,
+    "name":"P.F.Chang",
+   "cuisine":"Chinese",
+   "rating": "3.7",
+   "photo": "../images/pfchang.jpg",
+    "hours": "11AM-12AM",
+    "url": "subway.html"
+  },
+  {"id":3,
+  "name":"Quiznos",
+  "cuisine":"Sandwich",
+  "rating": "3.0",
+  "photo": "../images/quiznos.jpg",
+   "hours": "10AM-8:30PM",
+   "url": "subway.html"
+  }
+
+
+]
