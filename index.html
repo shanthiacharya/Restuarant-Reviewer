@@ -60,6 +60,7 @@
       z-index: 900;
     }
     </style>
+
   </head>
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" data-title="restuarantList">
 
@@ -68,19 +69,98 @@
       <div class="mdl-layout__header-row">
         <!-- Title -->
       <span class="mdl-layout-title">Restuarantza</span>
+
+       <div class="fab-container">
+         <!-- <button class="paper-button paper-floating-action-button fab" id="fab">
+        </button> -->
+        <button class="paper-button paper-floating-action-button fab" id="fab" >
+                    <i class="material-icons mdl-color-text--white" role="presentation">filter_list</i>
+                    <span class="visuallyhidden">add</span>
+        </button>
+       </div>
+
+
         <div class="mdl-layout-spacer"></div>
      </div>
    </header>
+   <div class="demo-drawer mdl-layout__drawer-right">
 
-   <div class="mdl-layout__drawer">
-     <span class="mdl-layout-title">Filter</span>
-     <nav class="mdl-navigation">
-       <a class="mdl-navigation__link" href="">Link</a>
-       <a class="mdl-navigation__link" href="">Link</a>
-       <a class="mdl-navigation__link" href="">Link</a>
-       <a class="mdl-navigation__link" href="">Link</a>
-     </nav>
+     <div class="title"> <h4>Filters</h4>
+          <span class="close">x</span>
+      </div>
+
+      <!--- List of filters --->
+     <div class ="filter_list" id="category">
+        <h4> Category </h4>
+        <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+          <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" value="Mexican">
+          <span class="mdl-checkbox__label">Mexican</span>
+        </label>
+        <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox">
+          <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" value="Chinese" >
+          <span class="mdl-checkbox__label">Chinese</span>
+        </label>
+        <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox">
+          <input type="checkbox" id="chkbox3" class="mdl-checkbox__input" value="Indian">
+          <span class="mdl-checkbox__label">Indian</span>
+        </label>
+        <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox">
+          <input type="checkbox" id="chkbox4" class="mdl-checkbox__input" value="Sandwich">
+          <span class="mdl-checkbox__label">Sandwiches</span>
+        </label>
+        <label for="chkbox5" class="mdl-checkbox mdl-js-checkbox">
+          <input type="checkbox" id="chkbox5" class="mdl-checkbox__input" value="Fast Food">
+          <span class="mdl-checkbox__label">Fast Food</span>
+        </label>
+    </div>
+
+    <hr/>
+
+    <div class ="filter_list">
+       <h4> Distance </h4>
+             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                 <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
+                 <span class="mdl-radio__label">0.5 miles</span>
+              </label>
+              <br>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                 <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                 <span class="mdl-radio__label">2 miles</span>
+              </label>
+              <br>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
+                 <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="3">
+                 <span class="mdl-radio__label">5 miles</span>
+              </label>
+              <br>
+              <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
+                 <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="4">
+                 <span class="mdl-radio__label">10 miles</span>
+              </label>
+              <br>
+
    </div>
+    <hr/>
+   <div class ="filter_list">
+      <h4> Price </h4>
+      <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+        <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+        <span class="mdl-checkbox__label">$</span>
+      </label>
+      <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+        <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+        <span class="mdl-checkbox__label">$$</span>
+      </label>
+      <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+        <input type="checkbox" id="chkbox1" class="mdl-checkbox__input">
+        <span class="mdl-checkbox__label">$$$</span>
+      </label>
+
+
+  </div>
+
+
+    </div>
 
     <!-- Add spacer, to align navigation to the right -->
 
@@ -94,6 +174,7 @@
 
       </div>
     </main>
+    <div class="mdl-layout__obfuscator-right"></div>
   </div>
 
 

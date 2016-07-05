@@ -68,6 +68,7 @@
       <div class="mdl-layout__header-row">
         <!-- Title -->
         <span class="mdl-layout-title">Restaurants</span>
+
         <!-- Add spacer, to align navigation to the right -->
         <div class="mdl-layout-spacer"></div>
         <!-- Navigation. We hide it in small screens. -->
@@ -87,16 +88,30 @@
     </main>
   </div>
   <dialog id="dialog" class="mdl-dialog">
-    <h3 class="mdl-dialog__title">MDL Dialog</h3>
+    <h3 class="mdl-dialog__title">Rate and Review</h3>
+    <div class="stars">
+        <div class="rating" style="width:0%"></div>
+        <input type="radio" name="rating" id="star5" value="5">
+        <label for="star5"></label>
+        <input type="radio" name="rating" id="star4" value="4">
+        <label for="star4"></label>
+        <input type="radio" name="rating" id="star3" value="3">
+        <label for="star3"></label>
+        <input type="radio" name="rating" id="star2" value="2">
+        <label for="star2"></label>
+        <input type="radio" name="rating" id="star1" value="1">
+        <label for="star1"></label>
+  </div>
     <div class="mdl-dialog__content">
-      <p>
-        This is an example of the Material Design Lite dialog component.
-        Please use responsibly.
-      </p>
+
+      <div>
+        <textarea type="text" width="1050" height="500" rows="5" id="address" placeholder="Describe your experience"></textarea>
+      </div>
     </div>
     <div class="mdl-dialog__actions">
-      <button type="button" class="mdl-button">Close</button>
-      <button type="button" class="mdl-button" disabled>Disabled action</button>
+
+      <button type="button" class="mdl-button mdl-js-button mdl-button--accent">Post</button>
+      <button type="button" class="mdl-button">Cancel</button>
     </div>
   </dialog>
 
@@ -129,18 +144,19 @@
 
 
 <script id="restuarantreviews-template" type="text/x-handlebars-template">
-  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" style="{overflow:visible}">
 
-  <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card card-hist mdl-cell mdl-cell--12-col">
 
-    <div class="mdl-card__supporting-text  mdl-grid mdl-grid--no-spacing">
-
+    <div class="mdl-card__supporting-text  mdl-grid mdl-grid--no-spacing" style="{overflow:visible}">
       <!-- Colored FAB button with ripple -->
-      <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent fab-top-right dialog-button">
-                  <i class="material-icons mdl-color-text--white" role="presentation">add</i>
+      <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent fab-top-right dialog-button" onclick="showModal()">
+                  <i class="material-icons mdl-color-text--white" role="presentation">edit</i>
                   <span class="visuallyhidden">add</span>
                 </button>
         <!-- Starts here -->
+      
+
       {{#each .}}
 
 
