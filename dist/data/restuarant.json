@@ -42,7 +42,7 @@
  },
   {"id":5,
   "name":"Jack in the Box",
-  "cuisine":"Fast Food",
+  "cuisine":"Pizza",
   "shortaddress":"Osgood Rd",
   "price":"$$",
   "rating": "60%",
@@ -50,26 +50,6 @@
    "hours": "11AM-8:30PM",
    "url": "jackinthebox.html"
   }
-  ,
-   {"id":6,
-   "name":"Zorba's Deli Cafe and Catering",
-   "cuisine":"Mediterranean",
-   "shortaddress":"Mission Boulevard",
-   "price":"$$",
-   "rating": "60%",
-   "photo": "../images/jackinthebox.jpg",
-    "hours": "11AM-8:30PM",
-    "url": "jackinthebox.html"
-  },
-  {"id":7,
-  "name":"Hotel Saravana Bhavan",
-  "cuisine":"Indian",
-  "shortaddress":"Mowry Avenue",
-  "price":"$$",
-  "rating": "60%",
-  "photo": "../images/saravanbhavan.jpg",
-   "hours": "11AM-8:30PM",
-   "url": "jackinthebox.html"
-  }
+
 
 ]
