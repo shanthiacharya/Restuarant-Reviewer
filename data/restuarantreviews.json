@@ -5,29 +5,34 @@
     "cuisine":"Fast Food",
     "longaddress":"3960 Washington Blvd, Fremont, CA 94538",
     "phone": "(510) 440-9203",
+    "distance":"1",
     "price":"$",
-    "rating": "50%",
+    "rating": "70%",
+    "rating1to5": "3.5",
     "photo": "../images/subway.jpg",
      "hours": "7AM-10PM",
-     "url": "subway.html",
+  
 
     "reviews": [
         {
         "reviewername":"Joe",
         "date":"03/21/15",
         "rating": "63%",
+        "rating1to5": "3.5",
         "comments": "Very clean and systematic."
       },
       {
           "reviewername":"Rob",
           "date":"01/20/15",
           "rating": "64%",
+          "rating1to5": "3.5",
           "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
       },
       {
         "reviewername":"Lana",
         "date":"08/21/14",
         "rating": "34%",
+        "rating1to5": "3.5",
         "comments": "They always run out of stuff when I go there"
       },
       {
@@ -45,7 +50,38 @@
    "rating": "3.7",
    "photo": "../images/pfchang.jpg",
     "hours": "11AM-12AM",
-    "url": "subway.html"
+    "url": "subway.html",
+
+    "reviews": [
+        {
+        "reviewername":"Joe",
+        "date":"03/21/15",
+        "rating": "63%",
+        "rating1to5": "3.5",
+        "comments": "Very clean and systematic."
+      },
+      {
+          "reviewername":"Rob",
+          "date":"01/20/15",
+          "rating": "64%",
+          "rating1to5": "3.5",
+          "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+      },
+      {
+        "reviewername":"Lana",
+        "date":"08/21/14",
+        "rating": "34%",
+        "rating1to5": "3.5",
+        "comments": "They always run out of stuff when I go there"
+      },
+      {
+      "reviewername":"Casey",
+      "date":"03/21/14",
+      "rating": "93%",
+      "comments": "Fresh, aromatic and nice ambience."
+     }
+     ]
+
   },
   {"id":3,
   "name":"Quiznos",
