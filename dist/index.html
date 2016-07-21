@@ -201,11 +201,12 @@
               <!-- href={{url}} data-id ={{id}} -->
               <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})"> <img class="photo" src={{photo}} width="100" height="100" alt="" ></img> </a>
              </div>
-            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+            <div  id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                <h5>{{name}}</h5>
-               <div class="star-ratings-sprite">
-               <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
-               </div><br/>
+                <li>  {{rating1to5}} </li>
+              <li>  <div class="star-ratings-sprite">
+                 <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
+               </div></li> <br/>
 
                 {{price}} - {{cuisine}}- {{shortaddress}} <br/>
                 <p> Open  {{hours}}<br/></p>

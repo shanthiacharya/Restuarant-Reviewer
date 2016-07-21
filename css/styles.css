@@ -106,7 +106,8 @@ z-index: 0;
     height: 21px;
     display:block;
   }
-
+  #resinfo li { display:inline-block; padding-right:10px; vertical-align:middle;
+                }
 
 
 

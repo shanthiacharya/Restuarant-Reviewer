@@ -145,11 +145,17 @@
           <!-- href={{url}} data-id ={{id}} -->
           <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})"> <img  src={{photo}} width="100" height="100" alt="" ></img> </a>
          </div>
-        <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-           <h5>{{name}}</h5>
+        <div id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+           <h5>  {{name}}</h5>
+            <li>  {{rating1to5}} </li>
+            <li>
            <div class="star-ratings-sprite">
            <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
-           </div>  <br/> {{cuisine}}
+           </div>  </li>
+            <p>{{price}} - {{cuisine}}</p>
+            <p><i class="material-icons">place</i> {{longaddress}} </p>
+             <p> <i class="material-icons">local_phone</i>{{phone}}</p>
+              <p> Open  {{hours}}</p>
            {{reviews.reviewername}}
         </div>
         {{/each}}
@@ -176,17 +182,14 @@
 
 
         <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-         <h5>{{reviewername}}</h5>
-         {{date}} <br/>
+         <h5> <img  src="../images/userface.png" width="30" height="30" alt="" ></img>    {{reviewername}}</h5>
+
          <div class="star-ratings-sprite">
          <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
          </div><br/>
-        {{comments }}
+        {{comments }}<br/>
       </div>
       {{/each}}
-      <!-- Ends here -->
-    </div>
-
   </div>
 
 </section>
