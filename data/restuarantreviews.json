@@ -1,0 +1,60 @@
+
+[
+  {"id":1,
+    "name":"Subway",
+    "cuisine":"Fast Food",
+    "longaddress":"3960 Washington Blvd, Fremont, CA 94538",
+    "phone": "(510) 440-9203",
+    "price":"$",
+    "rating": "50%",
+    "photo": "../images/subway.jpg",
+     "hours": "7AM-10PM",
+     "url": "subway.html",
+
+    "reviews": [
+        {
+        "reviewername":"Joe",
+        "date":"03/21/15",
+        "rating": "63%",
+        "comments": "Very clean and systematic."
+      },
+      {
+          "reviewername":"Rob",
+          "date":"01/20/15",
+          "rating": "64%",
+          "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+      },
+      {
+        "reviewername":"Lana",
+        "date":"08/21/14",
+        "rating": "34%",
+        "comments": "They always run out of stuff when I go there"
+      },
+      {
+      "reviewername":"Casey",
+      "date":"03/21/14",
+      "rating": "93%",
+      "comments": "Fresh, aromatic and nice ambience."
+     }
+     ]
+
+  },
+  {"id":2,
+    "name":"P.F.Chang",
+   "cuisine":"Chinese",
+   "rating": "3.7",
+   "photo": "../images/pfchang.jpg",
+    "hours": "11AM-12AM",
+    "url": "subway.html"
+  },
+  {"id":3,
+  "name":"Quiznos",
+  "cuisine":"Sandwich",
+  "rating": "3.0",
+  "photo": "../images/quiznos.jpg",
+   "hours": "10AM-8:30PM",
+   "url": "subway.html"
+  }
+
+
+]

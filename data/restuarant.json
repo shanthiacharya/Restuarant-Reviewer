@@ -1,0 +1,55 @@
+[
+
+  {"id":1,
+  "name":"Subway",
+  "cuisine":"Fast Food",
+  "shortaddress":"Washington Blvd",
+  "price":"$",
+  "rating": "50%",
+  "photo": "../images/subway.jpg",
+   "hours": "7AM-10PM",
+   "url": "subway.html"
+  },
+  {"id":2,
+    "name":"P.F.Chang",
+   "cuisine":"Chinese",
+   "shortaddress":"Washington Blvd",
+   "price":"$$$",
+   "rating": "60%",
+   "photo": "../images/pfchang.jpg",
+    "hours": "11AM-12AM",
+    "url": "subway.html"
+  },
+  {"id":3,
+  "name":"Quiznos",
+  "cuisine":"Sandwich",
+  "shortaddress":"Washington Blvd",
+  "price":"$",
+  "rating": "82%",
+  "photo": "../images/quiznos.jpg",
+   "hours": "10AM-8:30PM",
+   "url": "subway.html"
+  },
+  {"id":4,
+  "name":"Mission Pizza & Pub",
+  "cuisine":"Pizza",
+  "shortaddress":"Washington Blvd",
+  "price":"$$",
+  "rating": "82%",
+  "photo": "../images/missionpizza.jpg",
+   "hours": "11AM-8:30PM",
+   "url": "missionpizza.html"
+ },
+  {"id":5,
+  "name":"Jack in the Box",
+  "cuisine":"Pizza",
+  "shortaddress":"Osgood Rd",
+  "price":"$$",
+  "rating": "60%",
+  "photo": "../images/jackinthebox.jpg",
+   "hours": "11AM-8:30PM",
+   "url": "jackinthebox.html"
+  }
+
+
+]
