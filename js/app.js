@@ -136,7 +136,7 @@ $('#distance input[type=radio]').change(function(){
         // Filter the array by passed filter array
       filtereddistance =  restArr.filter (function (value) {
       //   console.log( "Array Value : " + value.distance + "Selected Value : " +selecteddistance);
-            if( Number (value.distance) >= selecteddistance ){
+            if( Number (value.distance) <= selecteddistance ){
                console.log( "Inside Greater Array Value : " + value.distance + "Selected Value : " +selecteddistance);
                 return true
              }
@@ -242,37 +242,6 @@ function loadTemplateData (loadData){
 }
 
 
-// Filter the restuarant array based on selected filters.
-
-
-function filteredArrayByArray(filtersarray){
-
-    var restArr =  new Array();
-    var filteredArray = new Array();
-    getRestaurantJSONArray().then(function(response) {
-      console.log("Success!", response);
-      restArr = JSON.parse(response);
-      console.log("Success!", restArr);
-      // Filter the array by passed filter array
-    filteredArray =  restArr.filter (function (value) {
-        for (var i = 0; i < filtersarray.length; i++) {
-          if(value.cuisine == filtersarray[i]) {
-              return true
-           }
-        }
-         return false;
-      });
-     console.log("filteredArray!", filteredArray);
-     return filteredArray;
-
-  }, function(error) {
-    console.error("Failed!", error);
-  });
-
-
-
-}
-
 
 var redirecttoDetailsPage = function(someValue) {
     // Work with that value
@@ -287,11 +256,6 @@ Handlebars.registerHelper('json', function(context) {
 
   return JSON.stringify(context).replace(/"/g, '&quot;');
 });
-
-
-
-
-
 
 
 
@@ -338,30 +302,6 @@ var showReviewModal = function(){
 }
 
 
-// $('#starratings input[type=radio]').click(function(){
-//     // var currval = $(this).val()
-//     // console.log ("Radio button clicked " +  currval);
-//     var searchIDs = $("#starratings input:radio:checked").map(function(){
-//         return $(this).val();
-//     }).toArray();
-//     console.log("stars :"  + searchIDs);
-//
-//
-// });
-
-
-// $("#postreviews").click(function() {
-//   console.log ("Post Reviews to localStorage");
-//   console.log (getselectedRestaurantname());
-//   console.log ("value:" + $('#starratings input[type=radio]').val());
-//   var selectedRestuarantname = getselectedRestaurantname();
-//   var key = selectedRestuarantname;
-//   var reviews = userreviews.value;
-//   var rating = $('#starratings input[type=radio]').val();
-//   restuarantReviews.push({key: key, reviews: reviews, rating:rating});
-//   saveReviews (restuarantReviews);
-// });
-
 // Save user reviews to localStorage
  function saveReviews() {
   var selectedReviews = JSON.stringify(restuarantReviews);
@@ -381,6 +321,8 @@ $(".fab").click(function() {
       $(".mdl-layout__drawer-right").removeClass("active");
       $(".mdl-layout__obfuscator-right").removeClass("ob-active");
 });
+
+
 
 $(".close").click(function() {
       $(".mdl-layout__drawer-right").removeClass("active");
