@@ -62,6 +62,6 @@ gulp.task('dist', [
 gulp.task('scripts', function() {
     console.log('Gulp is copying/uglifying js')
     gulp.src('js/**/*.js')
-        //  .pipe(uglify())
+         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });

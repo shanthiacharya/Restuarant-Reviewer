@@ -11,7 +11,7 @@
     "rating1to5": "3.5",
     "photo": "../images/subway.jpg",
      "hours": "7AM-10PM",
-  
+
 
     "reviews": [
         {
@@ -47,11 +47,14 @@
   {"id":2,
     "name":"P.F.Chang",
    "cuisine":"Chinese",
-   "rating": "3.7",
+   "longaddress":"3960 Washington Blvd, Fremont, CA 94538",
+   "phone": "(510) 440-9203",
+   "distance":"1",
+   "price":"$",
+   "rating": "70%",
+   "rating1to5": "3.7",
    "photo": "../images/pfchang.jpg",
     "hours": "11AM-12AM",
-    "url": "subway.html",
-
     "reviews": [
         {
         "reviewername":"Joe",
@@ -83,13 +86,178 @@
      ]
 
   },
-  {"id":3,
-  "name":"Quiznos",
-  "cuisine":"Sandwich",
-  "rating": "3.0",
-  "photo": "../images/quiznos.jpg",
-   "hours": "10AM-8:30PM",
-   "url": "subway.html"
+
+  {
+
+        "id":3,
+      "name":"Quiznos",
+      "cuisine":"Sandwich",
+      "longaddress":"Auto Mall Parkway",
+       "phone": "(510) 440-9203",
+       "distance":"10",
+      "price":"$",
+      "rating": "82%",
+      "rating1to5": "4.1",
+      "photo": "../images/quiznos.jpg",
+       "hours": "10AM-8:30PM",
+
+
+   "reviews": [
+       {
+       "reviewername":"Joe",
+       "date":"03/21/15",
+       "rating": "63%",
+       "rating1to5": "3.5",
+       "comments": "Very clean and systematic."
+     },
+     {
+         "reviewername":"Rob",
+         "date":"01/20/15",
+         "rating": "64%",
+         "rating1to5": "3.5",
+         "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+     },
+     {
+       "reviewername":"Lana",
+       "date":"08/21/14",
+       "rating": "34%",
+       "rating1to5": "3.5",
+       "comments": "They always run out of stuff when I go there"
+     },
+     {
+     "reviewername":"Casey",
+     "date":"03/21/14",
+     "rating": "93%",
+     "comments": "Fresh, aromatic and nice ambience."
+    }
+    ]
+  },
+  {"id":5,
+  "name":"Jack in the Box",
+  "cuisine":"Fast Food",
+  "longaddress":"Osgood Rd",
+  "phone": "(510) 440-9203",
+  "distance":"5",
+  "price":"$",
+  "rating": "64%",
+  "rating1to5":"3.2",
+  "photo": "../images/jackinthebox.jpg",
+   "hours": "11AM-8:30PM",
+   "reviews": [
+       {
+       "reviewername":"Joe",
+       "date":"03/21/15",
+       "rating": "63%",
+       "rating1to5": "3.5",
+       "comments": "Very clean and systematic."
+     },
+     {
+         "reviewername":"Rob",
+         "date":"01/20/15",
+         "rating": "64%",
+         "rating1to5": "3.5",
+         "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+     },
+     {
+       "reviewername":"Lana",
+       "date":"08/21/14",
+       "rating": "34%",
+       "rating1to5": "3.5",
+       "comments": "They always run out of stuff when I go there"
+     },
+     {
+     "reviewername":"Casey",
+     "date":"03/21/14",
+     "rating": "93%",
+     "comments": "Fresh, aromatic and nice ambience."
+    }
+    ]
+  }
+  ,
+   {"id":6,
+   "name":"Zorba's Deli Cafe and Catering",
+   "cuisine":"Mediterranean",
+   "longaddress":"Mission Boulevard",
+   "phone": "(510) 440-9203",
+  "distance":"0.5",
+   "price":"$$",
+   "rating": "86%",
+   "rating1to5":"4.3",
+   "photo": "../images/jackinthebox.jpg",
+    "hours": "11AM-8:30PM",
+    "reviews": [
+        {
+        "reviewername":"Joe",
+        "date":"03/21/15",
+        "rating": "63%",
+        "rating1to5": "3.5",
+        "comments": "Very clean and systematic."
+      },
+      {
+          "reviewername":"Rob",
+          "date":"01/20/15",
+          "rating": "64%",
+          "rating1to5": "3.5",
+          "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+      },
+      {
+        "reviewername":"Lana",
+        "date":"08/21/14",
+        "rating": "34%",
+        "rating1to5": "3.5",
+        "comments": "They always run out of stuff when I go there"
+      },
+      {
+      "reviewername":"Casey",
+      "date":"03/21/14",
+      "rating": "93%",
+      "comments": "Fresh, aromatic and nice ambience."
+     }
+     ]
+  },
+  {
+
+
+  "id":7,
+  "name":"Hotel Saravana Bhavan",
+  "cuisine":"Indian",
+  "longaddress":"Mowry Avenue",
+  "phone": "(510) 440-9203",
+  "distance":"10",
+  "price":"$$",
+  "rating": "70%",
+  "rating1to5":"3.5",
+  "photo": "../images/saravanbhavan.jpg",
+   "hours": "11AM-8:30PM",
+   "reviews": [
+       {
+       "reviewername":"Joe",
+       "date":"03/21/15",
+       "rating": "63%",
+       "rating1to5": "3.5",
+       "comments": "Very clean and systematic."
+     },
+     {
+         "reviewername":"Rob",
+         "date":"01/20/15",
+         "rating": "64%",
+         "rating1to5": "3.5",
+         "comments": "Very good staff, rest is as usual, keep up the good work while hiring staff."
+     },
+     {
+       "reviewername":"Lana",
+       "date":"08/21/14",
+       "rating": "34%",
+       "rating1to5": "3.5",
+       "comments": "They always run out of stuff when I go there"
+     },
+     {
+     "reviewername":"Casey",
+     "date":"03/21/14",
+     "rating": "93%",
+     "comments": "Fresh, aromatic and nice ambience."
+    }
+    ]
   }
 
 
