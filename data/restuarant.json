@@ -2,7 +2,7 @@
 
   {"id":1,
   "name":"Subway",
-  "cuisine":"Fast Food",
+  "cuisine":"Sandwich",
   "shortaddress":"Washington Blvd",
   "distance":"1",
   "price":"$",
@@ -21,9 +21,9 @@
    "rating": "80%",
    "rating1to5": "4",
    "photo": "../images/pfchang.jpg",
-    "hours": "11AM-12AM",
-    "url": "subway.html"
+    "hours": "11AM-12AM"
   },
+
   {"id":3,
   "name":"Quiznos",
   "cuisine":"Sandwich",
@@ -33,19 +33,20 @@
   "rating": "82%",
   "rating1to5": "4.1",
   "photo": "../images/quiznos.jpg",
-   "hours": "10AM-8:30PM",
-   "url": "subway.html"
+   "hours": "10AM-8:30PM"
+
   },
   {"id":4,
   "name":"Mission Pizza & Pub",
   "cuisine":"Pizza",
   "shortaddress":"Washington Blvd",
+  "distance":"2",
   "price":"$$",
   "rating": "88%",
     "rating1to5": "4.4",
   "photo": "../images/missionpizza.jpg",
-   "hours": "11AM-8:30PM",
-   "url": "missionpizza.html"
+   "hours": "11AM-8:30PM"
+
  },
   {"id":5,
   "name":"Jack in the Box",
@@ -56,8 +57,8 @@
   "rating": "64%",
   "rating1to5":"3.2",
   "photo": "../images/jackinthebox.jpg",
-   "hours": "11AM-8:30PM",
-   "url": "jackinthebox.html"
+   "hours": "11AM-8:30PM"
+
   }
   ,
    {"id":6,
@@ -69,8 +70,8 @@
    "rating": "86%",
    "rating1to5":"4.3",
    "photo": "../images/jackinthebox.jpg",
-    "hours": "11AM-8:30PM",
-    "url": "jackinthebox.html"
+    "hours": "11AM-8:30PM"
+
   },
   {"id":7,
   "name":"Hotel Saravana Bhavan",
@@ -81,8 +82,8 @@
   "rating": "70%",
   "rating1to5":"3.5",
   "photo": "../images/saravanbhavan.jpg",
-   "hours": "11AM-8:30PM",
-   "url": "jackinthebox.html"
+   "hours": "11AM-8:30PM"
+
   }
 
 ]
