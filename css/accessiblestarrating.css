@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: regular;
+  margin-bottom: 4px;
+}
+
+/**
+ * Use radio buttons for interactive ratings or use
+ * data-rating="4.1", etc. to set static ratings.
+ */
+.Rating {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Rating::before, .Rating::after {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+  color: #000;
+}
+.Rating::before {
+  margin-right: 6px;
+}
+.Rating::after {
+  margin-left: 6px;
+}
+
+.Rating-rater {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80px;
+  height: 16px;
+  margin-top: -2px;
+}
+
+.Rating-rater-input {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.Rating-rater-label {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.Rating-rater-input:focus ~ .Rating-rater-indicator::before,
+.Rating-rater-label:hover ~ .Rating-rater-indicator::before {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141228/rating-background-hover.svg);
+}
+
+.Rating-rater-input:nth-child(n+1):checked ~ .Rating-rater-indicator::after,
+.Rating-rater-label:nth-child(n+2):hover ~ .Rating-rater-indicator::after {
+  width: 20%;
+}
+
+.Rating-rater-input:nth-child(n+3):checked ~ .Rating-rater-indicator::after,
+.Rating-rater-label:nth-child(n+4):hover ~ .Rating-rater-indicator::after {
+  width: 40%;
+}
+
+.Rating-rater-input:nth-child(n+5):checked ~ .Rating-rater-indicator::after,
+.Rating-rater-label:nth-child(n+6):hover ~ .Rating-rater-indicator::after {
+  width: 60%;
+}
+
+.Rating-rater-input:nth-child(n+7):checked ~ .Rating-rater-indicator::after,
+.Rating-rater-label:nth-child(n+8):hover ~ .Rating-rater-indicator::after {
+  width: 80%;
+}
+
+.Rating-rater-input:nth-child(n+9):checked ~ .Rating-rater-indicator::after,
+.Rating-rater-label:nth-child(n+10):hover ~ .Rating-rater-indicator::after {
+  width: 100%;
+}
+
+.Rating-rater-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.Rating-rater-indicator::before, .Rating-rater-indicator::after {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: 80px 16px;
+  background-repeat: no-repeat;
+  content: "";
+}
+.Rating-rater-indicator::before {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141228/rating-background.svg);
+}
+.Rating-rater-indicator::after {
+  width: 0;
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141228/rating-foreground.svg);
+}
+
+.Rating[data-rating^="5"] .Rating-rater-indicator::after {
+  width: 100%;
+}
+
+.Rating[data-rating^="4.5"] .Rating-rater-indicator::after {
+  width: 90%;
+}
+
+.Rating[data-rating^="4"] .Rating-rater-indicator::after {
+  width: 80%;
+}
+
+.Rating[data-rating^="3.5"] .Rating-rater-indicator::after {
+  width: 70%;
+}
+
+.Rating[data-rating^="3"] .Rating-rater-indicator::after {
+  width: 60%;
+}
+
+.Rating[data-rating^="2.5"] .Rating-rater-indicator::after {
+  width: 50%;
+}
+
+.Rating[data-rating^="2"] .Rating-rater-indicator::after {
+  width: 40%;
+}
+
+.Rating[data-rating^="1.5"] .Rating-rater-indicator::after {
+  width: 30%;
+}
+
+.Rating[data-rating^="1"] .Rating-rater-indicator::after {
+  width: 20%;
+}
+
+.Rating[data-rating^="0.5"] .Rating-rater-indicator::after {
+  width: 10%;
+}
+
+.Rating--showValue::before {
+  content: attr(data-rating);
+}
+
+.Rating--static .Rating-rater-label,
+.Rating--static .Rating-rater-input {
+  display: none;
+}
+
+.Rating--large::before, .Rating--large::after {
+  font-size: 15px;
+}
+.Rating--large .Rating-rater {
+  width: 97px;
+  height: 19.4px;
+}
+.Rating--large .Rating-rater-label {
+  width: 19.4px;
+  height: 19.4px;
+}
+.Rating--large .Rating-rater-indicator::before, .Rating--large .Rating-rater-indicator::after {
+  background-size: 97px 19.4px;
+}
+
+.Rating--simple::after {
+  content: attr(data-rating);
+}
+.Rating--simple .Rating-rater {
+  width: 16px;
+}
+.Rating--simple .Rating-rater-indicator::before, .Rating--simple .Rating-rater-indicator::after {
+  width: 100%;
+}
+.Rating--simple[data-rating^="0"] .Rating-rater-indicator::after {
+  width: 0;
+}
+.Rating--simple:not([data-rating^="0"]) .Rating-rater-indicator::after {
+  width: 100%;
+}
+.Rating--simple.Rating--large .Rating-rater {
+  width: 19.4px;
+}

@@ -48,7 +48,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.deep_purple-pink.min.css">
     <link rel="stylesheet" href="css/mdlstyles.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/customstyles.css">
+    <link rel="stylesheet" href="css/accessiblestarrating.css">
     <style>
     #view-source {
       position: fixed;
@@ -70,13 +71,13 @@
         <!-- Title -->
       <span class="mdl-layout-title">Restuarants Reviewer</span>
 
-       <div class="fab-container">
+       <!-- <div class="fab-container"></div> -->
 
         <button class="paper-button paper-floating-action-button fab" id="fab" >
                     <i class="material-icons mdl-color-text--white" role="presentation">filter_list</i>
                     <span class="visuallyhidden">add</span>
         </button>
-       </div>
+
 
 
         <div class="mdl-layout-spacer"></div>
@@ -99,7 +100,8 @@
     <div class="demo-drawer mdl-layout__drawer-right">
 
       <div class="title"> <h4>Filters</h4>
-           <span class="close">x</span>
+
+           <span class="close"><i class="material-icons mdl-color-text--white" role="presentation">close</i></span>
        </div>
 
        <!--- List of filters --->
@@ -192,13 +194,19 @@
               <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})">
                  <img class="photo" alt ={{name}} src={{photo}} width="100" height="100" alt="" ></img> </a>
              </div>
-            <div  id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+             <!---id= "resinfo"-->
+            <div   class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone resinfo">
                <a>{{name}}</a> <br>
-                <li>  {{rating1to5}} </li>
-              <li>  <div class="star-ratings-sprite">
-                 <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
-               </div></li> <br/>
-
+                <!-- <li>  {{rating1to5}} </li> -->
+              <!-- <li> -->
+                <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label="4.0 out of 5">
+                 <span class="Rating-rater">
+                   <span class="Rating-rater-indicator">
+                   </span>
+                 </span>
+               </span>
+              
+                 <br/>
                 {{price}} - {{cuisine}}- {{shortaddress}} <br/>
                 <p> Open  {{hours}}<br/></p>
             </div>
