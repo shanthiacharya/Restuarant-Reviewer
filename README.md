@@ -9,6 +9,7 @@ Udacity-Nano-Project-3- restaurant review application
 3. Uses 2 JSON files: 1st containing restaurant information and 2nd files containing review information for each restaurant (name of reviewer, date of review, 5-star rating and comments). 
 4. Users can filter the restaurants (by cuisine, by location, etc) 
 5. User can also submit their reviews that will be stored in localStorage.
+6. Meets Web accessibility guidelines 
 
 
 Installation
