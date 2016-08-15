@@ -19,6 +19,28 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+header h1{
+    display: block;
+    position: relative;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: .02em;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+article {
+clear:both;
+}
+header a {
+    text-decoration: none;
+    color:#fff;
+}
+aside {
+  display: block;
+}
 .mdl-demo .mdl-layout__header-row {
   padding-left: 40px;
 }
@@ -73,7 +95,8 @@ html, body {
 }
 .mdl-demo .mdl-card .mdl-card__supporting-text {
 
-  margin: 40px;
+  margin: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;

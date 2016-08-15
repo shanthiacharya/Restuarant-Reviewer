@@ -69,13 +69,14 @@
       <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
         <!-- Title -->
-      <span class="mdl-layout-title">Restuarants Reviewer</span>
+      <!-- <span class="mdl-layout-title">Restuarants Reviewer</span> -->
+        <h1>Restuarants Reviewer</h1>
 
        <!-- <div class="fab-container"></div> -->
 
         <button class="paper-button paper-floating-action-button fab" id="fab" >
                     <i class="material-icons mdl-color-text--white" role="presentation">filter_list</i>
-                    <span class="visuallyhidden">add</span>
+                    <!-- <span class="visuallyhidden">add</span> -->
         </button>
 
 
@@ -97,36 +98,35 @@
       </div>
     </main>
     <div class="mdl-layout__obfuscator-right"></div>
-    <div class="demo-drawer mdl-layout__drawer-right">
-
-      <div class="title"> <h4>Filters</h4>
-
-           <span class="close"><i class="material-icons mdl-color-text--white" role="presentation">close</i></span>
-       </div>
+    <aside id="rightdrawer"  class="demo-drawer mdl-layout__drawer-right">
+      <!-- Filters go here -->
+        <div class="title"> <h4>Filters</h4>
+               <button class="close" aria-label ="Close" tabindex="1"><i class="material-icons mdl-color-text--white" role="presentation">close</i></button>
+        </div>
 
        <!--- List of filters --->
       <div class ="filter_list" id="cuisine">
-         <h4> Category </h4>
-         <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
-           <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" value="Mexican">
-           <span class="mdl-checkbox__label">Mexican</span>
-         </label>
-         <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox">
-           <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" value="Chinese" >
-           <span class="mdl-checkbox__label">Chinese</span>
-         </label>
-         <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox">
-           <input type="checkbox" id="chkbox3" class="mdl-checkbox__input" value="Indian">
-           <span class="mdl-checkbox__label">Indian</span>
-         </label>
-         <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox">
-           <input type="checkbox" id="chkbox4" class="mdl-checkbox__input" value="Sandwich">
-           <span class="mdl-checkbox__label">Sandwiches</span>
-         </label>
-         <label for="chkbox5" class="mdl-checkbox mdl-js-checkbox">
-           <input type="checkbox" id="chkbox5" class="mdl-checkbox__input" value="Fast Food">
-           <span class="mdl-checkbox__label">Fast Food</span>
-         </label>
+           <h4> Category </h4>
+           <label for="chkbox1" class="mdl-checkbox mdl-js-checkbox">
+             <input type="checkbox" id="chkbox1" class="mdl-checkbox__input" value="Mexican" tabindex="0">
+             <span class="mdl-checkbox__label">Mexican</span>
+           </label>
+           <label for="chkbox2" class="mdl-checkbox mdl-js-checkbox">
+             <input type="checkbox" id="chkbox2" class="mdl-checkbox__input" value="Chinese" tabindex="0" >
+             <span class="mdl-checkbox__label">Chinese</span>
+           </label>
+           <label for="chkbox3" class="mdl-checkbox mdl-js-checkbox">
+             <input type="checkbox" id="chkbox3" class="mdl-checkbox__input" value="Indian" tabindex="0">
+             <span class="mdl-checkbox__label">Indian</span>
+           </label>
+           <label for="chkbox4" class="mdl-checkbox mdl-js-checkbox">
+             <input type="checkbox" id="chkbox4" class="mdl-checkbox__input" value="Sandwich" tabindex="0">
+             <span class="mdl-checkbox__label">Sandwiches</span>
+           </label>
+           <label for="chkbox5" class="mdl-checkbox mdl-js-checkbox">
+             <input type="checkbox" id="chkbox5" class="mdl-checkbox__input" value="Fast Food" tabindex="0">
+             <span class="mdl-checkbox__label">Fast Food</span>
+           </label>
      </div>
 
      <hr/>
@@ -134,48 +134,46 @@
      <div class ="filter_list" id ="distance">
         <h4> Distance </h4>
               <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="0.5" >
+                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="0.5" tabindex="0">
                   <span class="mdl-radio__label">0.5 miles</span>
                </label>
                <br>
                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-                  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2">
+                  <input type="radio" id="option-2" class="mdl-radio__button" name="options" value="2" tabindex="0">
                   <span class="mdl-radio__label">2 miles</span>
                </label>
                <br>
                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-                  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="5">
+                  <input type="radio" id="option-3" class="mdl-radio__button" name="options" value="5" tabindex="0">
                   <span class="mdl-radio__label">5 miles</span>
                </label>
                <br>
                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-4">
-                  <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="10" checked>
+                  <input type="radio" id="option-4" class="mdl-radio__button" name="options" value="10" checked tabindex="0">
                   <span class="mdl-radio__label">10 miles</span>
                </label>
                <br>
-
-    </div>
+     </div>
      <hr/>
     <div class ="filter_list" id ="price">
        <h4> Price </h4>
        <label for="chkbox6" class="mdl-checkbox mdl-js-checkbox">
-         <input type="checkbox" id="chkbox6" class="mdl-checkbox__input" value="$">
+         <input type="checkbox" id="chkbox6" class="mdl-checkbox__input" value="$" tabindex="0">
          <span class="mdl-checkbox__label">$</span>
        </label>
        <label for="chkbox7" class="mdl-checkbox mdl-js-checkbox">
-         <input type="checkbox" id="chkbox7" class="mdl-checkbox__input" value="$$">
+         <input type="checkbox" id="chkbox7" class="mdl-checkbox__input" value="$$" tabindex="0">
          <span class="mdl-checkbox__label">$$</span>
        </label>
        <label for="chkbox8" class="mdl-checkbox mdl-js-checkbox">
-         <input type="checkbox" id="chkbox8" class="mdl-checkbox__input" value="$$$">
+         <input type="checkbox" id="chkbox8" class="mdl-checkbox__input" value="$$$" tabindex="0">
          <span class="mdl-checkbox__label">$$$</span>
        </label>
-
-
-   </div>
-
-
      </div>
+
+    </aside>
+      <!-- Filters end  -->
+
 
   </div>
 
@@ -185,35 +183,34 @@
     <script id="restuarant-template" type="text/x-handlebars-template">
       <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
-          <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-
             <!-- Starts here -->
-            {{#each this}}
-          <div class="photoContainer">
-              <!-- href={{url}} data-id ={{id}} -->
-              <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})">
-                 <img class="photo" alt ={{name}} src={{photo}} width="100" height="100" alt="" ></img> </a>
-             </div>
+          {{#each this}}
+          <article class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing" tabindex="0" onclick="redirecttoDetailsPage({{{json this}}})" >
+            <div class="photoContainer">
+                <!-- href={{url}} data-id ={{id}} -->
+                <a data-id ={{id}} data-control="resListItem" >
+                   <img class="photo" alt ={{name}} src={{photo}} width="100" height="100" alt="" ></img> </a>
+            </div>
              <!---id= "resinfo"-->
             <div   class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone resinfo">
-               <a>{{name}}</a> <br>
-                <!-- <li>  {{rating1to5}} </li> -->
-              <!-- <li> -->
-                <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label="4.0 out of 5">
+               <!-- <a  role="link" tabindex="0" onclick="redirecttoDetailsPage({{{json this}}})">{{name}}</a> <br> -->
+               <h5>{{name}}</h5>
+                <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label= {{rating1to5}} + "star rating out of 5">
                  <span class="Rating-rater">
                    <span class="Rating-rater-indicator">
                    </span>
                  </span>
                </span>
-              
+
                  <br/>
-                {{price}} - {{cuisine}}- {{shortaddress}} <br/>
+                <p>{{price}} - {{cuisine}}- {{shortaddress}} </p>
                 <p> Open  {{hours}}<br/></p>
             </div>
-
+          </article>
             {{/each}}
+
             <!-- Ends here -->
-          </div>
+
 
         </div>
 

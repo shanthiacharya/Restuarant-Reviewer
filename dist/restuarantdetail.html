@@ -65,18 +65,16 @@
   <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base" data-title="restuarantListDetail">
 
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header">
+      <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <!-- Title -->
-        <span class="mdl-layout-title">Restaurants</span>
 
-        <!-- Add spacer, to align navigation to the right -->
+      <a href="index.html" >  <h1>Restuarants Reviewer</h1></a>
+
         <div class="mdl-layout-spacer"></div>
-        <!-- Navigation. We hide it in small screens. -->
-
-      </div>
+     </div>
     </header>
     <!-- Add spacer, to align navigation to the right -->
+  <!-- <a href="index.html" > <i class="material-icons">keyboard_backspace</i> Back to All Restaurants</a> -->
 
     <main class="mdl-layout__content">
       <div class="page-content">
@@ -89,8 +87,9 @@
     </main>
   </div>
   <dialog id="dialog" class="mdl-dialog">
-    <h3 class="mdl-dialog__title">Rate and Review</h3>
-
+    <h3>Rate and Review</h3>
+     <h5> <img  src="../images/userface.png" width="30" height="30" alt="" ></img> Shanthi Acharya</h5>
+    <p id= date> </p>
     <span class="Rating Rating--large">
         <span class="Rating-rater" aria-label="Rating">
           <input class="Rating-rater-input" aria-label="Rate 1 out of 5" role="option" type="radio" id="1outof5l" name="ratingl" value="1"/>
@@ -111,6 +110,7 @@
     <div class="mdl-dialog__content">
 
       <div>
+        <label for="userreviews">Describe your experience</label>
         <textarea type="text" width="1050" height="500" rows="5" id="userreviews" placeholder="Describe your experience"></textarea>
       </div>
     </div>
@@ -142,32 +142,34 @@
 <script id="restuarantdetail-template" type="text/x-handlebars-template">
   <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
     <div class="mdl-card mdl-cell mdl-cell--12-col">
-      <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+
         <!-- Starts here -->
         {{#each .}}
-      <div class="photoContainer">
-          <!-- href={{url}} data-id ={{id}} -->
-          <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})">
-            <img  src={{photo}} width="100" height="100" alt ={{name}} ></img> </a>
-         </div>
-        <div id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-           <a>  {{name}}</a> <br/>
-           <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label="4.0 out of 5">
-            <span class="Rating-rater">
-              <span class="Rating-rater-indicator">
-              </span>
-            </span>
-           </span>
+        <article class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing" tabindex="0"  >
+             <div class="photoContainer">
+              <!-- href={{url}} data-id ={{id}} -->
+              <a data-id ={{id}} data-control="resListItem" onclick="redirecttoDetailsPage({{{json this}}})">
+                <img  src={{photo}} width="100" height="100" alt ={{name}} ></img> </a>
+             </div>
+            <div id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+               <h5>  {{name}}</h5>
+               <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label="4.0 out of 5">
+                <span class="Rating-rater">
+                  <span class="Rating-rater-indicator">
+                  </span>
+                </span>
+               </span>
 
-            <p>{{price}} - {{cuisine}}</p>
-            <p><i class="material-icons">place</i> {{longaddress}} </p>
-             <p> <i class="material-icons">local_phone</i>{{phone}}</p>
-              <p><i class="material-icons">schedule</i>Open{{hours}}</p>
-           {{reviews.reviewername}}
-        </div>
+                <p>{{price}} - {{cuisine}}</p>
+                <p><i class="material-icons">place</i> {{longaddress}} </p>
+                 <p> <i class="material-icons">local_phone</i>{{phone}}</p>
+                  <p><i class="material-icons">schedule</i>Open{{hours}}</p>
+               {{reviews.reviewername}}
+            </div>
+          </article>
         {{/each}}
         <!-- Ends here -->
-      </div>
+
     </div>
   </section>
 </script>
@@ -178,22 +180,19 @@
 <script id="restuarantreviews-template" type="text/x-handlebars-template">
   <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" >
 
-  <div class="mdl-card card-hist mdl-cell mdl-cell--12-col">
 
-    <div class="mdl-card__supporting-text  mdl-grid mdl-grid--no-spacing" >
-            <button type="button" class="mdl-button mdl-js-button mdl-button--accent top-right" id ="writereviews" onclick="showReviewModal();"> Write a Review</button>
-        <!-- Starts here -->
+    <div class="mdl-card card-hist mdl-cell mdl-cell--12-col">
 
+      <div class="mdl-card__actions top-right">
+        <button type="button" class="mdl-button mdl-js-button mdl-button--accent top-right " id ="writereviews" onclick="showReviewModal();"> Write a Review</button>
+      </div>
+      <br/>
+      <!-- Starts here -->
       {{#each .}}
-
-
-
-        <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-         <h5> <img  src="../images/userface.png" width="30" height="30" alt="" ></img>    {{reviewername}}</h5>
-
-         <!-- <div class="star-ratings-sprite">
-         <span style="width:{{rating}}" class="star-ratings-sprite-rating"></span>
-         </div> -->
+      <article class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing"  style="{clear:both}"tabindex="0" >
+        <div id= "resinfo" class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+        <img  src="../images/userface.png" width="30" height="30" alt="" ></img><h5>{{reviewername}} </h5>
+         {{date }}<br/><br/>
          <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label="4.0 out of 5">
           <span class="Rating-rater">
             <span class="Rating-rater-indicator">
@@ -201,8 +200,9 @@
           </span>
          </span>
          <br/>
-        {{comments }}<br/>
+        {{comments }}<br/><br/>
       </div>
+      </article>
       {{/each}}
   </div>
 

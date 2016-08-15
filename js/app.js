@@ -1,3 +1,6 @@
+// Will hold previously focused element
+var focusedElementBeforeModal;
+
 
 /* Fetch json file and populate handlebar templates */
 $(document).ready(function(){
@@ -261,6 +264,8 @@ Handlebars.registerHelper('json', function(context) {
 
 
 var showReviewModal = function(){
+
+      focusedElementBeforeModal = document.activeElement;
       var dialogButton = document.querySelector('.dialog-button');
       var dialog = document.querySelector('#dialog');
       var confirmdialog = document.querySelector('#confirmdialog');
@@ -276,8 +281,60 @@ var showReviewModal = function(){
       if (! dialog.showModal) {
         dialogPolyfill.registerDialog(dialog);
       }
-         dialog.showModal();
-    dialog.querySelector('#postreviews')
+
+      // Add date
+       var d = new Date();
+       document.getElementById("date").innerHTML = d.getMonth() +'/' + d.getDate() + '/' +d.getFullYear();
+
+       dialog.showModal();
+       var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+       var focusableElements = dialog.querySelectorAll(focusableElementsString);
+
+       // // Listen for and trap the keyboard
+       dialog.addEventListener('keydown', trapTabKey);
+       // Convert NodeList to Array
+       focusableElements = Array.prototype.slice.call(focusableElements);
+       var firstTabStop = focusableElements[0]; // close button
+       var secondTabStop = focusableElements[1];
+       var lastTabStop = focusableElements[focusableElements.length - 1];
+       // Focus first filter checkbox
+       firstTabStop.focus();
+
+       function trapTabKey(e) {
+           // Check for TAB key press
+           if (e.keyCode === 9) {
+
+             // SHIFT + TAB
+             if (e.shiftKey) {
+
+               if (document.activeElement === secondTabStop) {
+               e.preventDefault();
+               lastTabStop.focus();
+             }
+
+             // TAB
+             } else {
+                  if (document.activeElement === lastTabStop) {
+                   e.preventDefault();
+                   firstTabStop.focus();
+                 }
+              //  else
+              //    if (document.activeElement === firstTabStop) {
+              //      e.preventDefault();
+              //      secondTabStop.focus();
+              //    }
+             }
+           }
+
+           // ESCAPE
+           if (e.keyCode === 27) {
+             dialog.close();
+             focusedElementBeforeModal.focus();
+           }
+         }
+
+
+       dialog.querySelector('#postreviews')
       .addEventListener('click', function() {
         var selectedRestuarantname = getselectedRestaurantname();
         var key = selectedRestuarantname;
@@ -315,21 +372,89 @@ var showReviewModal = function(){
 $(".fab").click(function() {
       $(".mdl-layout__drawer-right").addClass("active");
       $(".mdl-layout__obfuscator-right").addClass("ob-active");
+      // Save current focus
+      focusedElementBeforeModal = document.activeElement;
+      console.log("focusedElementBeforeModal: " +focusedElementBeforeModal)
+      manageFocusRightDrawer ();
     });
-
-    $(".mdl-layout__obfuscator-right").click(function() {
+  $(".mdl-layout__obfuscator-right").click(function() {
       $(".mdl-layout__drawer-right").removeClass("active");
       $(".mdl-layout__obfuscator-right").removeClass("ob-active");
 });
 
 
 
-$(".close").click(function() {
-      $(".mdl-layout__drawer-right").removeClass("active");
-      $(".mdl-layout__obfuscator-right").removeClass("ob-active");
-    });
+function manageFocusRightDrawer (){
 
-    $(".mdl-layout__obfuscator-right").click(function() {
-      $(".mdl-layout__drawer-right").addClass("active");
-      $(".mdl-layout__obfuscator-right").addClass("ob-active");
+  // Find all focusable children
+  var drawer = document.querySelector('.mdl-layout__drawer-right');
+  var focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+  var focusableElements = drawer.querySelectorAll(focusableElementsString);
+
+  // // Listen for and trap the keyboard
+  drawer.addEventListener('keydown', trapTabKey);
+  // Convert NodeList to Array
+  focusableElements = Array.prototype.slice.call(focusableElements);
+  var firstTabStop = focusableElements[0]; // close button
+  var secondTabStop = focusableElements[1];
+  var lastTabStop = focusableElements[focusableElements.length - 1];
+  // Focus first filter checkbox
+  secondTabStop.focus();
+
+  function trapTabKey(e) {
+      // Check for TAB key press
+      if (e.keyCode === 9) {
+
+        // SHIFT + TAB
+        if (e.shiftKey) {
+
+          if (document.activeElement === secondTabStop) {
+          e.preventDefault();
+          lastTabStop.focus();
+        }
+
+        // TAB
+        } else {
+             if (document.activeElement === lastTabStop) {
+              e.preventDefault();
+              firstTabStop.focus();
+            }
+          else
+            if (document.activeElement === firstTabStop) {
+              e.preventDefault();
+              secondTabStop.focus();
+            }
+        }
+      }
+
+      // ESCAPE
+      if (e.keyCode === 27) {
+        closeDrawer();
+      }
+    }
+
+
+}
+
+function closeDrawer(){
+
+  $(".mdl-layout__drawer-right").removeClass("active");
+  $(".mdl-layout__obfuscator-right").removeClass("ob-active");
+  // Set focus back to element that had it before the modal was opened
+  focusedElementBeforeModal.focus();
+}
+
+
+$(".close").click(function() {
+
+  closeDrawer();
+      // $(".mdl-layout__drawer-right").removeClass("active");
+      // $(".mdl-layout__obfuscator-right").removeClass("ob-active");
+});
+
+$(".mdl-layout__obfuscator-right").click(function() {
+  console.log ('obfuscator clicked');
+  closeDrawer();
+  // $(".mdl-layout__drawer-right").removeClass("active");
+  // $(".mdl-layout__obfuscator-right").removeClass("ob-active");
 });

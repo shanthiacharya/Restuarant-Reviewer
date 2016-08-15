@@ -6,6 +6,8 @@ var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var uglifycss = require('gulp-uglifycss');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('default',['copy-html','scripts','copy-css','copy-data','copy-images'],function(){
 
@@ -45,6 +47,10 @@ gulp.task('copy-css', function() {
 
     console.log('Gulp is copying css')
     gulp.src('css/**/*.css')
+          .pipe(uglifycss({
+         "maxLineLen": 80,
+         "uglyComments": true
+       }))
         .pipe(gulp.dest('./dist/css'));
 });
 

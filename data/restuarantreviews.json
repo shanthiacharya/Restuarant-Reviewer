@@ -82,6 +82,7 @@
       "reviewername":"Casey",
       "date":"03/21/14",
       "rating": "93%",
+      "rating1to5": "5",
       "comments": "Fresh, aromatic and nice ambience."
      }
      ]
@@ -129,6 +130,7 @@
      "reviewername":"Casey",
      "date":"03/21/14",
      "rating": "93%",
+     "rating1to5": "3.5",
      "comments": "Fresh, aromatic and nice ambience."
     }
     ]
@@ -170,6 +172,7 @@
      "reviewername":"Casey",
      "date":"03/21/14",
      "rating": "93%",
+     "rating1to5": "3.5",
      "comments": "Fresh, aromatic and nice ambience."
     }
     ]
@@ -212,6 +215,7 @@
       "reviewername":"Casey",
       "date":"03/21/14",
       "rating": "93%",
+      "rating1to5": "3.5",
       "comments": "Fresh, aromatic and nice ambience."
      }
      ]
@@ -256,6 +260,8 @@
      "reviewername":"Casey",
      "date":"03/21/14",
      "rating": "93%",
+     "rating1to5": "3.5",
+     
      "comments": "Fresh, aromatic and nice ambience."
     }
     ]
