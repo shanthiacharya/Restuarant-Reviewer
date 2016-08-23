@@ -85,7 +85,11 @@ $(document).ready(function(){
 
 
 
+
 });
+
+
+
 
 
 var restuarantReviews = new Array();
@@ -252,14 +256,48 @@ var redirecttoDetailsPage = function(someValue) {
     var obj = someValue;
     console.log("id: " + obj.id )
     window.location.href = "restuarantdetail.html"+"#" + obj.name;
+
   // $(location).href ="restuarantdetail.html"
 }
+
+function handleEnterKey(e,someValue) {
+
+  // var restuarantDiv = document.querySelector('.mdl-card__supporting-text');
+  // console.log(restuarantDiv);
+  // var restuarantName = restuarantDiv.id;
+
+  // Work with that value
+  console.log(someValue);
+  var obj = someValue;
+  console.log("id: " + obj.id )
+    if (e.keyCode == 13){
+    window.location.href = "restuarantdetail.html"+"#" + obj.name;
+
+    }
+  // $(location).href ="restuarantdetail.html"
+}
+
+
+
 
 Handlebars.registerHelper('json', function(context) {
 
   return JSON.stringify(context).replace(/"/g, '&quot;');
 });
 
+Handlebars.registerHelper('addlabel', function(context) {
+
+  var lprice =  JSON.stringify(context).replace(/"/g, '&quot;');
+  var arialabel_adder = "Price" + lprice;
+  return arialabel_adder;
+});
+
+Handlebars.registerHelper('addratingLabel', function(context) {
+
+  var lrating =  JSON.stringify(context).replace(/"/g, '&quot;');
+  var arialabel_adder = lrating + "stars out of 5" 
+  return arialabel_adder;
+});
 
 
 
@@ -458,3 +496,4 @@ $(".mdl-layout__obfuscator-right").click(function() {
   // $(".mdl-layout__drawer-right").removeClass("active");
   // $(".mdl-layout__obfuscator-right").removeClass("ob-active");
 });
+console.log (document.querySelector('.mdl-card__supporting-text'));
