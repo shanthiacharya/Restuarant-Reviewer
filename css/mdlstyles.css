@@ -1,6 +1,8 @@
 html,body{font-family:'Roboto','Helvetica',sans-serif;margin:0;padding:0}
+header a{text-decoration:none;color:#fff}header a h1{text-decoration:none;color:#fff}
 header h1{display:block;position:relative;font-family:"Roboto","Helvetica","Arial",sans-serif;font-size:20px;line-height:1;letter-spacing:.02em;font-weight:400;box-sizing:border-box}
-article{clear:both}header a{text-decoration:none;color:#fff}aside{display:block}.mdl-demo .mdl-layout__header-row{padding-left:40px}
+article{clear:both}.section-result{border:1px solid #000}.section-result hover{background-color:#fafafa}
+background-color:#fafafa;aside{display:block}.mdl-demo .mdl-layout__header-row{padding-left:40px}
 .mdl-demo .mdl-layout.is-small-screen .mdl-layout__header-row h3{font-size:inherit}
 .mdl-demo .mdl-layout__tab-bar-button{display:none}.mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button{display:none}
 .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,.mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container{overflow:visible}
