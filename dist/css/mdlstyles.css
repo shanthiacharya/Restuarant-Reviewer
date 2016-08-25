@@ -11,7 +11,7 @@ background-color:#fafafa;aside{display:block}.mdl-demo .mdl-layout__header-row{p
 .mdl-demo main>.mdl-layout__tab-panel{padding:8px;padding-top:48px}.mdl-demo .mdl-card{height:auto;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 .mdl-demo .mdl-card>*{height:auto;overflow:visible;z-index:2}.mdl-demo .mdl-card .mdl-card__supporting-text{margin:20px;border-bottom:1px solid rgba(0,0,0,0.12);-webkit-flex-grow:1;-ms-flex-positive:1;flex-grow:1;padding:0;color:inherit;width:calc(100% - 80px)}
 .mdl-demo.mdl-demo .mdl-card__supporting-text h4{margin-top:0;margin-bottom:20px}
-.mdl-demo .mdl-card__actions{margin:0;padding:4px 40px;color:inherit}.mdl-demo .mdl-card__actions a{color:#00bcd4;margin:0}
+.mdl-demo .mdl-card__actions{margin:0;padding:30px 40px;color:inherit}.mdl-demo .mdl-card__actions a{color:#00bcd4;margin:0}
 .mdl-demo .mdl-card__actions a:hover,.mdl-demo .mdl-card__actions a:active{color:inherit;background-color:transparent}
 .mdl-demo .mdl-card__supporting-text+.mdl-card__actions{border-top:1px solid rgba(0,0,0,0.12)}
 .mdl-demo #add{position:absolute;right:40px;top:36px;z-index:999}.mdl-demo .mdl-layout__content section:not(:last-of-type){position:relative;margin-bottom:48px}
