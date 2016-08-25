@@ -196,7 +196,7 @@
             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone resinfo">
                <!-- <a  role="link" tabindex="0" onclick="redirecttoDetailsPage({{{json this}}})">{{name}}</a> <br> -->
                <h5>{{name}}</h5>
-                <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label= "{{{addratingLabel rating1to5}}}" + "star rating out of 5">
+                <span class="Rating Rating--large Rating--showValue" data-rating={{rating1to5}} aria-label= "{{{addratingLabel rating1to5}}}" >
                  <span class="Rating-rater">
                    <span class="Rating-rater-indicator">
                    </span>
@@ -204,10 +204,12 @@
                </span>
 
                  <br/>
-                <span>
-                <label id="price"  aria-label="{{{addlabel  this.price}}}"> {{price}} </label>
-                <p> {{cuisine}}- {{shortaddress}} </p> </span>
-                <p> Open  {{hours}}<br/></p>
+                 <div>
+                    <span>
+                    <label   aria-label="{{{addlabel  this.price}}}"> {{price}} </label>
+                    <label> - {{cuisine}} </label> <label> - {{shortaddress}} </label> </span>
+                </div>
+              <p> Open  {{hours}}<br/></p>
             </div>
           </div>
 
