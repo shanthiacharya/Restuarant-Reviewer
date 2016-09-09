@@ -8,7 +8,7 @@
   "price":"$",
   "rating": "70%",
   "rating1to5": "3.5",
-  "photo": "../images/subway.jpg",
+  "photo": "./images/subway.jpg",
    "hours": "7AM-10PM"
 
   },
@@ -20,7 +20,7 @@
    "price":"$$$",
    "rating": "80%",
    "rating1to5": "4",
-   "photo": "../images/pfchang.jpg",
+   "photo": "./images/pfchang.jpg",
     "hours": "11AM-12AM"
   },
 
@@ -32,7 +32,7 @@
   "price":"$",
   "rating": "82%",
   "rating1to5": "4.1",
-  "photo": "../images/quiznos.jpg",
+  "photo": "./images/quiznos.jpg",
    "hours": "10AM-8:30PM"
 
   },
@@ -44,7 +44,7 @@
   "price":"$$",
   "rating": "88%",
     "rating1to5": "4.4",
-  "photo": "../images/missionpizza.jpg",
+  "photo": "./images/missionpizza.jpg",
    "hours": "11AM-8:30PM"
 
  },
@@ -56,7 +56,7 @@
   "price":"$",
   "rating": "64%",
   "rating1to5":"3.2",
-  "photo": "../images/jackinthebox.jpg",
+  "photo": "./images/jackinthebox.jpg",
    "hours": "11AM-8:30PM"
 
   }
@@ -69,7 +69,7 @@
    "price":"$$",
    "rating": "86%",
    "rating1to5":"4.3",
-   "photo": "../images/jackinthebox.jpg",
+   "photo": "./images/jackinthebox.jpg",
     "hours": "11AM-8:30PM"
 
   },
@@ -81,7 +81,7 @@
   "price":"$$",
   "rating": "70%",
   "rating1to5":"3.5",
-  "photo": "../images/saravanbhavan.jpg",
+  "photo": "./images/saravanbhavan.jpg",
    "hours": "11AM-8:30PM"
 
   }
