@@ -9,7 +9,7 @@ $(document).ready(function(){
 
     if ($("body").data("title") === "restuarantList") {
         /* JSON file for restuarnt list */
-        url = "../data/restuarant.json";
+        url = "./data/restuarant.json";
         xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 var myArr = JSON.parse(xmlhttp.responseText);
@@ -26,7 +26,7 @@ $(document).ready(function(){
        /* Get restuarantname */
      var restuarantname = window.location.hash.substring(1);
        /* JSON file for reviews*/
-     url = "../data/restuarantreviews.json";
+     url = "./data/restuarantreviews.json";
      xmlhttp.onreadystatechange = function() {
      if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
              var myArr = JSON.parse(xmlhttp.responseText);
@@ -295,7 +295,7 @@ Handlebars.registerHelper('addlabel', function(context) {
 Handlebars.registerHelper('addratingLabel', function(context) {
 
   var lrating =  JSON.stringify(context).replace(/"/g, '&quot;');
-  var arialabel_adder = lrating + "stars out of 5" 
+  var arialabel_adder = lrating + "stars out of 5"
   return arialabel_adder;
 });
 
